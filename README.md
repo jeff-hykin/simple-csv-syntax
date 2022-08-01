@@ -1,25 +1,11 @@
-After cloning this template
-- replace `YOUR_NAME`, `YOUR_USERNAME`, `YOUR_LANGUAGE`, `YOUR_LANG_EXTENSION_HERE`
-
-### Like this extension?
-You'll probably like this as well: [The Better Syntax Megapack](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-syntax)
-
 # What does this do?
-This will get you the bleeding-edge syntax highlighting for YOUR_LANGUAGE. Which means your theme will be able to color your code better.
-
-NOTE: The default VS Code theme does not color much. Switch to the Dark+ theme (installed by default) or use a theme like one of the following to benefit from the changes:
-- [XD Theme](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.xd-theme)
-- [Noctis](https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis)
-- [Kary Pro Colors](https://marketplace.visualstudio.com/items?itemName=karyfoundation.theme-karyfoundation-themes)
-- [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
-- [One Monokai Theme](https://marketplace.visualstudio.com/items?itemName=azemoh.one-monokai)
-- [Winteriscoming](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming)
-- [Popping and Locking](https://marketplace.visualstudio.com/items?itemName=hedinne.popping-and-locking-vscode)
-- [Syntax Highlight Theme](https://marketplace.visualstudio.com/items?itemName=peaceshi.syntax-highlight)
-- [Default Theme Enhanced](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-themes)
+This is like Rainbow CSV but doesn't add a bunch of on-start activation hooks that slow down VS Code. This package is pure syntax highlighting.
 
 ## How do I use it?
 Just install the VS Code extension and the changes will automatically be applied to all relevent files.
+
+### Like this extension?
+You'll probably like this as well: [The Better Syntax Megapack](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-syntax)
 
 <!-- # Before and After (Material Theme)
 Before                     | After 
