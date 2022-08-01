@@ -1,7 +1,7 @@
 {
   "version": "",
   "name": "csv syntax",
-  "scopeName": "text.csv",
+  "scopeName": "source.csv",
   "fileTypes": [
     "csv"
   ],

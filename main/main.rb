@@ -9,7 +9,7 @@ require_relative './tokens.rb'
 # create grammar!
 # 
 # 
-grammar = Grammar.fromTmLanguage("./main/original_csv.tmLanguage.json")
+grammar = Grammar.fromTmLanguage("./main/csv.tmLanguage.json")
 
 # 
 #
