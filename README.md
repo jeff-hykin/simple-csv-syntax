@@ -6,8 +6,3 @@ Just install the VS Code extension and the changes will automatically be applied
 
 ### Like this extension?
 You'll probably like this as well: [The Better Syntax Megapack](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-syntax)
-
-<!-- # Before and After (Material Theme)
-Before                     | After 
-:-------------------------:|:-------------------------:
-![material_before](https://user-images.githubusercontent.com/17692058/59826753-83abd080-92fc-11e9-9dfb-d891da55cd13.png) | ![material_after](https://user-images.githubusercontent.com/17692058/59826766-8ad2de80-92fc-11e9-9bd6-3496ed5c917b.png) -->

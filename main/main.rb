@@ -9,21 +9,31 @@ require_relative './tokens.rb'
 # create grammar!
 # 
 # 
-grammar = Grammar.fromTmLanguage("./main/csv.tmLanguage.json")
+# grammar = Grammar.fromTmLanguage("./original.tmLanguage.json")
+grammar = Grammar.new(
+    name: "CSV",
+    scope_name: "source.csv",
+    fileTypes: [
+        "csv",
+        # for example here are come C++ file extensions:
+		#     "cpp",
+		#     "cxx",
+		#     "c++",
+    ],
+    version: "",
+)
 
 # 
 #
 # Setup Grammar
 #
 # 
-    # CSV is so simple it doesn't need a setup
-    
-    # grammar[:$initial_context] = [
-    #     :comments,
-    #     :string,
-    #     :variable,
-    #     # (add more stuff here) (variables, strings, numbers)
-    # ]
+    grammar[:$initial_context] = [
+        :comments,
+        :string,
+        :variable,
+        # (add more stuff here) (variables, strings, numbers)
+    ]
 
 # 
 # Helpers
@@ -51,38 +61,38 @@ grammar = Grammar.fromTmLanguage("./main/csv.tmLanguage.json")
 # 
 # basic patterns
 # 
-    # grammar[:variable] = Pattern.new(
-    #     match: variable,
-    #     tag_as: "variable.other",
-    # )
+    grammar[:variable] = Pattern.new(
+        match: variable,
+        tag_as: "variable.other",
+    )
     
-    # grammar[:line_continuation_character] = Pattern.new(
-    #     match: /\\\n/,
-    #     tag_as: "constant.character.escape.line-continuation",
-    # )
+    grammar[:line_continuation_character] = Pattern.new(
+        match: /\\\n/,
+        tag_as: "constant.character.escape.line-continuation",
+    )
     
-    # grammar[:attribute] = PatternRange.new(
-    #     start_pattern: Pattern.new(
-    #             match: /\[\[/,
-    #             tag_as: "punctuation.section.attribute.begin"
-    #         ),
-    #     end_pattern: Pattern.new(
-    #             match: /\]\]/,
-    #             tag_as: "punctuation.section.attribute.end",
-    #         ),
-    #     tag_as: "support.other.attribute",
-    #     # tag_content_as: "support.other.attribute", # <- alternative that doesnt double-tag the start/end
-    #     includes: [
-    #         :attributes_context,
-    #     ]
-    # )
+    grammar[:attribute] = PatternRange.new(
+        start_pattern: Pattern.new(
+                match: /\[\[/,
+                tag_as: "punctuation.section.attribute.begin"
+            ),
+        end_pattern: Pattern.new(
+                match: /\]\]/,
+                tag_as: "punctuation.section.attribute.end",
+            ),
+        tag_as: "support.other.attribute",
+        # tag_content_as: "support.other.attribute", # <- alternative that doesnt double-tag the start/end
+        includes: [
+            :attributes_context,
+        ]
+    )
 
 # 
 # imports
 # 
-    # grammar.import(PathFor[:pattern]["comments"])
-    # grammar.import(PathFor[:pattern]["string"])
-    # grammar.import(PathFor[:pattern]["numeric_literal"])
+    grammar.import(PathFor[:pattern]["comments"])
+    grammar.import(PathFor[:pattern]["string"])
+    grammar.import(PathFor[:pattern]["numeric_literal"])
 
 #
 # Save
